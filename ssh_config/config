@@ -1,0 +1,161 @@
+#####################################################
+# Penta Server/Machines                             #
+# - ONLY AT WORK OR THROUGH THROUGH SSL VPN         #
+#####################################################
+
+# Build/Development Machines
+## Personal Build Machine (Deb6, Squeeze)
+Host bld
+    Hostname 192.168.42.232
+    User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Personal Build Machine (Deb8, Jessie)
+Host bldj
+    Hostname 192.168.42.233
+    User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Shared Build Machine (Morphine)
+Host mor
+	Hostname 10.0.0.40
+	User gyyoon
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+
+# Test Resource/Servers/WAPPLES
+## Test WAPPLES (Private)
+Host wapples
+	Hostname 192.168.42.130
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host server
+	Hostname 192.168.42.13
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+
+## Test NPS (NP Packet Simulator)
+Host nps
+	Hostname 192.168.42.11
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host nie
+	Hostname 192.168.42.12
+	User root
+
+Host sindy
+	Hostname 192.168.40.245
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host jmeter
+	Hostname 192.168.40.246
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+# CI Daily Build Servers
+## Gentoo (For Stable Components; WAPPLES 4.0.34.x)
+Host gen34
+	Hostname 192.168.42.201
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Gentoo (For Stable Components; WAPPLES 4.0.36.x)
+Host gen36
+	Hostname 192.168.42.202
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Debian 6 (For Stable Components; WAPPLES 4.0.52.x)
+Host deb52
+	Hostname 192.168.42.203
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Debian 8 (For Stable Components; WAPPLES 4.0.54.x)
+Host deb54
+	Hostname 192.168.42.204
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Debian 8 (For Stable & Develop Componenets; WAPPLES 4.0.55.x)
+Host deb55
+	Hostname 192.168.42.205
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+
+# Running Service Servers
+## Gerrit/Morpheus (gerrit.pentasecurity.com)
+Host gerrit
+	Hostname 10.0.0.11
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Gerrit Backup Server (new-neo)
+Host nn
+	Hostname 10.0.0.10
+	User root
+
+## Old Gerrit (neo)
+Host neo
+	Hostname 10.0.0.15
+	User root
+
+## Release Related Servers
+### Penta Release Server (release.pentasecurity.com)
+Host release
+	Hostname release.pentasecurity.com
+	User release
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+### Penta APT Server (apt.pentasecurity.com)
+Host apts
+	Hostname apt.pentasecurity.com
+	User release
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+
+#####################################################
+# Global Server/Machines                            #
+# - Can be accessed from internet                   #
+#####################################################
+
+# Personal (Private) Developement Machine
+Host dev
+	Hostname 115.68.220.196
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host nas
+	Hostname nas.dr8r3ad.com
+	User admin
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+# Ubuntu Korea Community (Official LoCo Team)
+Host ubuntu
+	Hostname ubuntu-kr.org
+	User ubuntu
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa

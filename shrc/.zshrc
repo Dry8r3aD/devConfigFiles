@@ -1,15 +1,11 @@
 # Alias for Colored result
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # Alias for Basic Linux Commands
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls'
 alias vi='vim'
 
 # Custom alias
@@ -17,16 +13,16 @@ alias gitc='git clean -df && git checkout -- .'
 alias gits='git status'
 alias gitm='git checkout $1'
 
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
-export ZSH=/root/.oh-my-zsh
+export ZSH=/Users/gyyoon/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -72,16 +68,16 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-#Preferred editor for local and remote sessions
+
+# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
@@ -92,7 +88,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -102,3 +98,30 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+### Private Settings
+# SSH Alias
+alias bld="ssh bld"
+alias bldj="ssh bldj"
+alias mor="ssh mor"
+alias wapples="ssh wapples"
+alias ubuntu="ssh ubuntu"
+alias dev="ssh dev"
+
+# Custom SSH Commands
+function wpl()
+{
+	~/.help_scripts/login_wapples $1
+}
+
+function nplab()
+{
+	ssh root@192.168.42.$1
+}
+
+function lab()
+{
+	ssh root@192.168.40.$1
+}
+
+

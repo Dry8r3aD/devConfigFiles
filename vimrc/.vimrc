@@ -73,6 +73,7 @@ call vundle#rc()
 	Bundle 'taglist.vim'
 	Bundle 'AutoComplPop"'
 	Bundle 'Source-Explorer-srcexpl.vim'
+	Bundle 'vim-airline/vim-airline'
 
 filetype plugin indent on     " required!
 
@@ -107,6 +108,11 @@ set csverb
 
 if 1
 nmap <F3> :tabnew<CR>
+endif
+
+if 1
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
 endif
 
 
