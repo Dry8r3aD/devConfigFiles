@@ -252,3 +252,10 @@ endf
 
 " 자동으로 공백 지워주는 script
 autocmd! BufWrite * mark ' | silent! %s/\s\+$// | norm ‘'
+
+
+" 파일을 열 때 마지막으로 수정했었던 위치를 띄워주는 script
+autocmd BufReadPost *
+		\ if line("'\"") > 1 && line("'\"") <= line("$") | 
+		\     exe "normal! g`\"" |
+		\ endif

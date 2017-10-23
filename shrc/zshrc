@@ -1,17 +1,36 @@
 # Alias for Colored result
-#alias ls='ls --color=auto'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # Alias for Basic Linux Commands
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls'
 alias vi='vim'
 
 # Custom alias
 alias gitc='git clean -df && git checkout -- .'
 alias gits='git status'
 alias gitm='git checkout $1'
+alias gitd='git diff HEAD^ | vi -'
+alias gitr='git review'
+alias gitp='git pull'
+alias gitl='git log'
+alias gitt='git tag'
+
+function gitb()
+{
+	if [ $# -eq 0 ]
+	then
+		git branch
+	else
+		git branch $1
+	fi
+}
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
