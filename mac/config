@@ -1,0 +1,207 @@
+#####################################################
+# Penta Server/Machines                             #
+# - ONLY AT WORK OR THROUGH THROUGH SSL VPN         #
+#####################################################
+
+# Build/Development Machines
+## Personal Build Machine (Deb6, Squeeze)
+Host bld
+	Hostname 192.168.42.234
+    User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Personal Build Machine (Deb8, Jessie)
+Host bldj
+    Hostname 192.168.42.235
+    User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Shared Build Machine (Morphine)
+Host mor
+	Hostname 10.0.0.40
+	User gyyoon
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host dpdk
+    Hostname 192.168.42.23
+	User gyyoon
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+# Test Resource/Servers/WAPPLES
+Host server
+	Hostname 192.168.42.13
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host aws
+	Hostname 18.229.67.200
+	User admin
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/tmp_test_gyyoon.pem
+
+Host awss
+	Hostname 13.209.43.216
+	User ubuntu
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/gyyoon_kr_key.pem
+
+## Test NPS (NP Packet Simulator)
+Host nps
+	Hostname 192.168.42.30
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+	RemoteForward 52698 localhost:52698
+
+Host sindy
+	Hostname 192.168.40.245
+	User penta
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host jmeter
+	Hostname 192.168.40.246
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+# CI Daily Build Servers
+## Gentoo (For Old-Stable Components; WAPPLES 4.0.34)
+Host ci4034
+	Hostname 192.168.42.201
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Gentoo (For Old-Stable Components; WAPPLES 4.0.36)
+Host ci4036
+	Hostname 192.168.42.202
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Debian 6 (For Old-Stable Components; WAPPLES 4.0.52)
+Host ci4052
+	Hostname 192.168.42.203
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Debian 8 (For Stable Components; WAPPLES 5.0.0)
+Host ci500
+	Hostname 192.168.42.204
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Debian 8 (For Stable Componenets; WAPPLES 5.0.2)
+Host ci502
+	Hostname 192.168.42.205
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Debian 8 (For Stable & Componenets; WAPPLES 5.0.12)
+Host ci5012
+	Hostname 192.168.42.206
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+
+# Running Service Servers
+## Gerrit/Morpheus (gerrit.pentasecurity.com)
+Host gerrit
+	Hostname 10.0.0.11
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Gerrit Backup Server (new-neo)
+Host nn
+	Hostname 10.0.0.10
+	User root
+
+## Old Gerrit (neo)
+Host neo
+	Hostname 10.0.0.15
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Old Mantis(wits)
+Host legwits
+	Hostname legend-wits.pentasecurity.com
+	Port 6687
+	User webman
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Mantis(wits)
+Host wits
+	Hostname wits.pentasecurity.com
+	Port 6687
+	User devops
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+## Release Related Servers
+### Penta Release Server (release.pentasecurity.com)
+Host release
+	Hostname release.pentasecurity.com
+	User release
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+### Penta APT Server (apt.pentasecurity.com)
+Host apt
+	Hostname apt.pentasecurity.com
+	User apt
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+
+#####################################################
+# Global Server/Machines                            #
+# - Can be accessed from internet                   #
+#####################################################
+
+# Personal (Private) Developement Machine
+Host dev
+	#Hostname 115.68.220.196
+	Hostname dev.dry8r3ad.com
+	User root
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+Host nas
+	Hostname nas.dry8r3ad.com
+	Port 2201
+	User admin
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+# Ubuntu Korea Community (Official LoCo Team)
+Host ubuntu
+	Hostname 52.231.77.99
+	User ubuntu
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
+
+# Ubuntu Korea Community New-Server (LoCo's account)
+Host ubu
+	Hostname 178.128.209.190
+	Port 2202
+	User root
+	IdentityFile ~/.ssh/id_rsa
+
+# Korea Digital Media High School AMS WAPPLESF
+host dimiwaf
+	Hostname 49.247.197.216
+	User root
+	IdentityFile ~/.ssh/id_rsa
