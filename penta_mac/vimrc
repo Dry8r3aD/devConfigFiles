@@ -41,7 +41,10 @@ set wildmode=longest:full,full
 set fdm=marker
 set tw=80
 
-" NP팀 코딩 스타일 "
+" Color Scheme
+colorscheme jellybeans
+
+" NP팀 코딩 스타일
 set cino=>4
 set noexpandtab
 set tabstop=4
@@ -57,6 +60,7 @@ set t_Co=256i
 endif
 
 " Vundle(Vim Bundle) configuration
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -257,3 +261,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+" 파일 닫은 후 커서위치 저장하는 script
+au BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\ exe "norm g`\"" |
+\ endif

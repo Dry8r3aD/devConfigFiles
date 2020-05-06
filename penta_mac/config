@@ -18,13 +18,6 @@ Host bldj
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 
-## Shared Build Machine (Morphine)
-Host mor
-	Hostname 10.0.0.40
-	User gyyoon
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-
 Host dpdk
     Hostname 192.168.42.23
 	User gyyoon
@@ -37,18 +30,6 @@ Host server
 	User root
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
-
-Host aws
-	Hostname 18.229.67.200
-	User admin
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/tmp_test_gyyoon.pem
-
-Host awss
-	Hostname 13.209.43.216
-	User ubuntu
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/gyyoon_kr_key.pem
 
 ## Test NPS (NP Packet Simulator)
 Host nps
@@ -64,30 +45,10 @@ Host sindy
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 
-Host jmeter
-	Hostname 192.168.40.246
-	User root
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-
 # CI Daily Build Servers
-## Gentoo (For Old-Stable Components; WAPPLES 4.0.34)
-Host ci4034
-	Hostname 192.168.42.201
-	User root
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-
 ## Gentoo (For Old-Stable Components; WAPPLES 4.0.36)
 Host ci4036
 	Hostname 192.168.42.202
-	User root
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-
-## Debian 6 (For Old-Stable Components; WAPPLES 4.0.52)
-Host ci4052
-	Hostname 192.168.42.203
 	User root
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
@@ -99,20 +60,12 @@ Host ci500
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 
-## Debian 8 (For Stable Componenets; WAPPLES 5.0.2)
-Host ci502
-	Hostname 192.168.42.205
-	User root
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-
 ## Debian 8 (For Stable & Componenets; WAPPLES 5.0.12)
 Host ci5012
 	Hostname 192.168.42.206
 	User root
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
-
 
 # Running Service Servers
 ## Gerrit/Morpheus (gerrit.pentasecurity.com)
@@ -131,14 +84,6 @@ Host nn
 Host neo
 	Hostname 10.0.0.15
 	User root
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-
-## Old Mantis(wits)
-Host legwits
-	Hostname legend-wits.pentasecurity.com
-	Port 6687
-	User webman
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 
@@ -179,17 +124,11 @@ Host dev
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 
+# not sure....
 Host nas
 	Hostname nas.dry8r3ad.com
 	Port 2201
 	User admin
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
-
-# Ubuntu Korea Community (Official LoCo Team)
-Host ubuntu
-	Hostname 52.231.77.99
-	User ubuntu
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 
@@ -198,10 +137,6 @@ Host ubu
 	Hostname 178.128.209.190
 	Port 2202
 	User root
+	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/id_rsa
 
-# Korea Digital Media High School AMS WAPPLESF
-host dimiwaf
-	Hostname 49.247.197.216
-	User root
-	IdentityFile ~/.ssh/id_rsa
