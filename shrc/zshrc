@@ -29,8 +29,11 @@ function gitb()
 	else
 		git branch $1
 	fi
-
 }
+
+# Easy CMake
+alias mk='mkdir build; cd build; cmake ..; make'
+
 # Custom Ping w/ SSH Config Ref.
 function png()
 {
