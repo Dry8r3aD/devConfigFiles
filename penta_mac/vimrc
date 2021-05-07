@@ -79,6 +79,11 @@ call vundle#rc()
 	Bundle 'AutoComplPop"'
 	Bundle 'Source-Explorer-srcexpl.vim'
 	Bundle 'vim-airline/vim-airline'
+	" From tunerprime
+	Bundle 'nanotech/jellybeans.vim'
+	Bundle 'scrooloose/syntastic'
+	Bundle 'git://git.wincent.com/command-t.git'
+
 
 filetype plugin indent on     " required!
 
